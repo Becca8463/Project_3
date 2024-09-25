@@ -1,7 +1,5 @@
 # Project_3
 
-https://nces.ed.gov/programs/edge/geographic/schoollocations
-  source for school data
 
 https://dasil.sites.grinnell.edu/downloadable-data/
   source for FBI data
@@ -10,3 +8,6 @@ Clarke, Philippa, Melendez, Robert, and Chenoweth, Megan. National Neighborhood 
 
 https://www.nber.org/research/data/ssa-federal-information-processing-series-fips-state-and-county-crosswalk
 source for lookup sheet
+
+https://nces.ed.gov/ccd/elsi/tableGenerator.aspx
+source for school data
