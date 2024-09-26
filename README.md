@@ -10,4 +10,5 @@ https://www.nber.org/research/data/ssa-federal-information-processing-series-fip
 source for lookup sheet
 
 https://nces.ed.gov/ccd/elsi/tableGenerator.aspx
+http://nces.ed.gov/ccd/elsi/
 source for school data
