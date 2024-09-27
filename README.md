@@ -10,3 +10,12 @@ source for lookup sheet
 https://nces.ed.gov/ccd/elsi/tableGenerator.aspx
 http://nces.ed.gov/ccd/elsi/
 source for school data
+
+https://www.imls.gov/research-evaluation/data-collection/public-libraries-survey
+source for library data
+
+https://www.imls.gov/sites/default/files/legacy/assets/1/AssetManager/PLS_Defs_FY03.pdf
+source for library column name key
+
+https://stackoverflow.com/questions/22216076/unicodedecodeerror-utf8-codec-cant-decode-byte-0xa5-in-position-0-invalid-s
+source for "unicode_escape"
