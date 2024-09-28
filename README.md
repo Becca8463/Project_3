@@ -22,3 +22,6 @@ source for "unicode_escape"</br>
 
 https://git-lfs.com/</br>
 source for large storage file install</br>
+
+https://librarycarpentry.org/lc-python-intro/looping-data-sets.html</br>
+source for adding year column in library loop</br>
