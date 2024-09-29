@@ -2,7 +2,7 @@
 </br></br></br>
 
 Clarke, Philippa, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Crimes by County, United States, 2002-2014. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2019-12-02. https://doi.org/10.3886/E115006V1 </br>
-source for Clean FBI file
+source for Clean FBI file</br>
 
 https://www.nber.org/research/data/ssa-federal-information-processing-series-fips-state-and-county-crosswalk</br>
 source for lookup sheet
@@ -25,3 +25,12 @@ source for large storage file install</br>
 
 https://librarycarpentry.org/lc-python-intro/looping-data-sets.html</br>
 source for adding year column in library loop</br>
+
+https://stackoverflow.com/questions/71564504/pandas-merge-returning-more-results-than-either-original-dataframe</br>
+source for indicator=True when merging dataframes</br>
+
+https://medium.com/@akarabaev96/pandas-merge-best-practices-stop-wasting-your-time-on-debugging-the-merge-operations-72778845d9b7</br>
+source for suffixes: _overlapping when merging dataframes</br>
+
+https://librarycarpentry.org/lc-python-intro/looping-data-sets.html</br>
+source for appending file name as a column</br>
