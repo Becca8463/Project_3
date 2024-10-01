@@ -34,3 +34,6 @@ source for suffixes: _overlapping when merging dataframes</br>
 
 https://librarycarpentry.org/lc-python-intro/looping-data-sets.html</br>
 source for appending file name as a column</br>
+
+https://stackoverflow.com/questions/20025882/add-a-string-prefix-to-each-value-in-a-pandas-string-column</br>
+source for adding county to column </br>
