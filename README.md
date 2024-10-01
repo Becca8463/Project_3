@@ -9,8 +9,9 @@ This ETL project brought together several databases for a one stop look at how t
 -LFS</br></br>
 
 ### Data Sources</br></br>
+The resources decided on for this project all orginate from the US government. These institutions are interested in collecting facts and data as it serves the US population. As such, it is the belief of these group members that the data collected is as subjective as possible. In addition, these government agencies release their information to the public for stastical analysis. An important consideration for the FBI data is that no singular data source can ever be considered an exhaustive source of all crime. The FBI is limited in what local agencies submit to them, and local agencies are limited in what gets reported to them.
 1.Crime data</br>
-Clarke, Philippa, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Crimes by County, United States, 2002-2014. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2019-12-02. https://doi.org/10.3886/E115006V1 </br></br>
+Clarke, Philippa, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Crimes by County, United States, 2002-2014. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2019-12-02. https://doi.org/10.3886/E115006V1 </br>
 This is the source for the already cleaned FBI file with the FIPS code added. The FBI website has data download, however this one was already transformed into a CSV file for us to use more conveniently.</br></br>
 2. School data</br>
 https://nces.ed.gov/ccd/elsi/tableGenerator.aspx</br>
@@ -38,6 +39,9 @@ The datasets all came from the sources listed above. All members of our group us
 3. Library data</br>Each years worth of data must be loaded and encoded using UTF-8.</br>Glob library is used to read and print all the files. Once all of the CSVs are read in, glob can again be used in a for loop to add a year column to the dataframe by extracting the year from the file name.</br>The data frames are then concacted using pd.concat. After concactination, the needed columns are kept and the rest are dropped. The kept columns are renamed and reordered for legibility.</br>The word 'county' needs to be added to the counties of this dataset in order for it to be matchable to the other datasets in PostGres. This is accomplished with .astype(str) + ' county'. The index is named for ease of use in PostGres and the dtypes are double checked and recast if they are incorrect. The data is now ready to be downloaded for PostGres. </br></br>
 ## Load</br></br>
 The database used in this project is PostGres. Table schema of the three tables are created to create the correct tables in the database. The CSVs are loaded in. The ID column is the primary key for each table. County, state, and year are the foriegn keys. Because some counties in different states share names, it is important to use all of these foriegn keys to ensure the correct data is accessed. </br></br></br>
+
+# How to use and interact with this database</br></br>
+The data can be downloaded using the resources posted above. Any column can be kept from the datasets and the code can still be followed. It is the hope that this database can provide a basis for crime and civil service research. Not only do these datasets have data on number of schools and libraries, but there are also factors such as student to teacher ratios and library usage. These many subjects joined together make for several relationships that can be examined between a location's access to government funded services and its experience of crime. 
 
 ### Code resources
 https://stackoverflow.com/questions/22216076/unicodedecodeerror-utf8-codec-cant-decode-byte-0xa5-in-position-0-invalid-s</br>
