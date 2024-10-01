@@ -1,7 +1,7 @@
 # Project_3 Civil Services and Crime</br>---</br></br>
 Sarah Brittle, Harriet Orleans, Rebecca Skinner</br>---</br></br>
 ##Project Summary</br>---</br>
-This ETL project brought together several databases for a one stop look at how the availability of civil services within a county relates to the amount of crime. The services chosen were libraries and schools. The crime data if from the FBI and covers both violent crimes and assult crimes. The idea behind this project was to create an easy to read and access database from which many kinds of analysis can be achieved.</br></br>
+This ETL project brought together several databases for a one stop look at how the availability of civil services within a county relates to the amount of crime. The services chosen were libraries and schools. The crime data if from the FBI and covers both violent crimes and assult crimes. The idea behind this project was to create an easy to read and access database from which many kinds of analysis can be achieved.</br></br></br>
 
 ### Aplications</br></br>
 -Pandas</br>
@@ -18,10 +18,8 @@ http://nces.ed.gov/ccd/elsi/</br>
 The school data comes from the National Center for Education Statistics. Linked above the table generater, which can be used to pull as much or as little data as is wanted. Our data rows were organized by School and included the 50 states + outlying areas.</br></br>
 3. Library data</br>
 https://www.imls.gov/research-evaluation/data-collection/public-libraries-survey</br>
-The library data is from the Institute of Museum and Library Services. Each year will have to be downloaded individually and then merged.</br></br>
-https://www.nber.org/research/data/ssa-federal-information-processing-series-fips-state-and-county-crosswalk</br>
-source for lookup sheet</br>
-</br></br>
+The library data is from the Institute of Museum and Library Services. Each year will have to be downloaded individually and then merged.
+</br></br></br>
 
 ### Other Resources</br></br>
 1. https://www.nber.org/research/data/ssa-federal-information-processing-series-fips-state-and-county-crosswalk</br>
@@ -29,7 +27,7 @@ The FBI data includes FIPS code. The FIPS code is a five digit code representing
 2. https://www.imls.gov/sites/default/files/legacy/assets/1/AssetManager/PLS_Defs_FY03.pdf</br>
 The is where to find the documentation guide for the library data.
 3. https://git-lfs.com/</br>
-These datasets are very large. It might be necessarry to dowload the LFS add-on to load these large file to GitHub.</br></br>
+These datasets are very large. It might be necessarry to dowload the LFS add-on to load these large file to GitHub.</br></br></br>
 
 # Extract, Transform, and Load</br>---</br></br>
 ## Extract</br></br>
@@ -39,7 +37,7 @@ The datasets all came from the sources listed above. All members of our group us
 2. School Data</br>The school data was first cleaned by dropping any duplicates and NAs. The data is obtained with a "†" symbol marking NA data, so for ease of reading the symbol was turned into an NA. (It is important to drop NA before replacing the "†" symbol, otherwise most of the data will be dropped if the drop is performed after).</br>The data as it originally comes is not well organized and not conducive to the data structure in crime and library data, so the data must be melted using pd.melt. This brings the multiple columns for each subject for each year and stacks them in one column and the data in another column (like unpivot in excel). The school name and state columns should be used as the index for this function.</br>The new stacked column is then split at the year to seperate the year into a seperate column and the data subject into its own column. The year column needs some more splitting before it is only a four digit year in each row. The unnessecary columns are dropped. </br>The remaining columns are reorganized. It is important for the School Name, state, and year columns to be on the left of the dataframe. This is because in the pivot those three columns will act as the index, and the subject and data columns will be 'unstacked' so to say so that now the data is spread down a column instead of across the dataframe as it did in its original form. After some cleaning, this data is now conducive to the crime and library data and can be saved for PostGresl.</br></br>
 3. Library data</br>Each years worth of data must be loaded and encoded using UTF-8.</br>Glob library is used to read and print all the files. Once all of the CSVs are read in, glob can again be used in a for loop to add a year column to the dataframe by extracting the year from the file name.</br>The data frames are then concacted using pd.concat. After concactination, the needed columns are kept and the rest are dropped. The kept columns are renamed and reordered for legibility.</br>The word 'county' needs to be added to the counties of this dataset in order for it to be matchable to the other datasets in PostGres. This is accomplished with .astype(str) + ' county'. The index is named for ease of use in PostGres and the dtypes are double checked and recast if they are incorrect. The data is now ready to be downloaded for PostGres. </br></br>
 ## Load</br></br>
-The database used in this project is PostGres. Table schema of the three tables are created to create the correct tables in the database. The CSVs are loaded in. The ID column is the primary key for each table. County, state, and year are the foriegn keys. Because some counties in different states share names, it is important to use all of these foriegn keys to ensure the correct data is accessed. 
+The database used in this project is PostGres. Table schema of the three tables are created to create the correct tables in the database. The CSVs are loaded in. The ID column is the primary key for each table. County, state, and year are the foriegn keys. Because some counties in different states share names, it is important to use all of these foriegn keys to ensure the correct data is accessed. </br></br></br>
 
 ### Code resources
 https://stackoverflow.com/questions/22216076/unicodedecodeerror-utf8-codec-cant-decode-byte-0xa5-in-position-0-invalid-s</br>
