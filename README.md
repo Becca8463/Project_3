@@ -5,7 +5,7 @@ Clarke, Philippa, Melendez, Robert, and Chenoweth, Megan. National Neighborhood 
 source for Clean FBI file</br>
 
 https://www.nber.org/research/data/ssa-federal-information-processing-series-fips-state-and-county-crosswalk</br>
-source for lookup sheet
+source for lookup sheet</br>
 </br>
 https://nces.ed.gov/ccd/elsi/tableGenerator.aspx</br>
 http://nces.ed.gov/ccd/elsi/</br>
