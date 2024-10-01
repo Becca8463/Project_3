@@ -37,3 +37,7 @@ source for appending file name as a column</br>
 
 https://stackoverflow.com/questions/20025882/add-a-string-prefix-to-each-value-in-a-pandas-string-column</br>
 source for adding county to column </br>
+
+https://pandas.pydata.org/docs/user_guide/reshaping.html</br>
+pandas pivot/unpivot background info</br>
+
