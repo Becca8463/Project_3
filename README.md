@@ -1,4 +1,4 @@
-# Project_3 Civil Services and Crime</br>---</br></br>
+# Project_3 Civil Services and Crime</br></br></br>
 Sarah Brittle, Harriet Orleans, Rebecca Skinner</br>---</br></br>
 ##Project Summary</br>---</br>
 This ETL project brought together several databases for a one stop look at how the availability of civil services within a county relates to the amount of crime. The services chosen were libraries and schools. The crime data if from the FBI and covers both violent crimes and assult crimes. The idea behind this project was to create an easy to read and access database from which many kinds of analysis can be achieved.</br></br></br>
@@ -30,7 +30,7 @@ The is where to find the documentation guide for the library data.
 3. https://git-lfs.com/</br>
 These datasets are very large. It might be necessarry to dowload the LFS add-on to load these large file to GitHub.</br></br></br>
 
-# Extract, Transform, and Load</br>---</br></br>
+# Extract, Transform, and Load</br></br></br>
 ## Extract</br></br>
 The datasets all came from the sources listed above. All members of our group used pandas and python to load the data from CSVs.</br></br>
 ## Transform</br></br>
@@ -64,4 +64,7 @@ source for adding county to column </br>
 
 https://pandas.pydata.org/docs/user_guide/reshaping.html</br>
 pandas pivot/unpivot background info</br>
+
+https://dev.to/sajidurshajib/changing-foreign-key-constraints-in-postgresql-a-step-by-step-guide-3kak</br>
+source for postgres alter table code</br>
 
